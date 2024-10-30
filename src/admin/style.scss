@@ -1,0 +1,86 @@
+// React notification component
+@import "../../node_modules/react-notifications-component/dist/scss/notification";
+
+// WordPress base styles
+@import "node_modules/@wordpress/base-styles/mixins";
+@import "node_modules/@wordpress/base-styles/variables";
+
+// Components
+@import "./components/header/style";
+@import "./components/shortcut/style";
+@import "./components/welcome-guide/style";
+
+// Monaco Editor common styles
+@import "../components/monaco-editor/style";
+
+@import "./editor-config/style";
+
+@include wordpress-admin-schemes();
+
+// WordPress admin
+.auto-fold #wpcontent {
+	padding-left: 0;
+}
+
+#custom-html-block-extension-admin {
+
+	// Container class
+	.chbe-admin-container {
+		position: relative;
+		max-width: 1200px;
+		padding: 0 $grid-unit-20 + $grid-unit-05;
+		margin: 0 auto;
+	}
+
+	// React notification component styles
+	.rnc__base {
+		bottom: 0;
+		right: 0;
+	}
+
+	.rnc__notification-item {
+		margin-bottom: $grid-unit-20;
+	}
+
+	.rnc__notification-container--bottom-right {
+		bottom: 0;
+		right: $grid-unit-20;
+	}
+
+	// Gutenberg component styles
+	.components-disabled {
+		opacity: 0.3;
+	}
+
+	.components-panel__body {
+		background: $white;
+	}
+}
+
+.chbe-admin {
+	position: relative;
+
+	&.is-waiting {
+		opacity: 0.3;
+	}
+
+	.chbe-admin__loading {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		margin-left: 89px;
+
+		.components-spinner {
+			margin: 0;
+			transform: scale(1.5);
+		}
+	}
+
+	.chbe-admin__tab-panel .components-tab-panel__tabs {
+		justify-content: center;
+		margin-bottom: $grid-unit-50;
+		background: $white;
+		box-shadow: 0 1px 0 rgba(213, 213, 213, 0.5);
+	}
+}

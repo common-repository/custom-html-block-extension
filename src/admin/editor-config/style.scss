@@ -1,0 +1,41 @@
+@import "./components/editor-preview/style";
+@import "./components/item-help/style";
+@import "./components/filter/style";
+
+.chbe-admin-editor-config {
+
+	.components-select-control {
+		min-width: 200px;
+	}
+
+	.components-range-control {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.components-toggle-control {
+		max-width: 300px;
+	}
+
+	.chbe-admin-editor-config__settings {
+		flex: 1;
+	}
+
+	.chbe-admin-editor-config__basic-settings {
+		padding: $grid-unit-30;
+		background: $white;
+		border-top: $border-width solid $gray-300;
+		border-bottom: $border-width solid $gray-300;
+	}
+
+	.chbe-admin-editor-config__preview {
+		position: sticky;
+		top: $grid-unit-50;
+		width: 50%;
+
+		@media screen and (max-width: 782px) {
+			position: static;
+			width: 100%;
+		}
+	}
+}

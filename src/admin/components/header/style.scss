@@ -1,0 +1,15 @@
+.chbe-admin-header {
+	padding: $grid-unit-20 0;
+	background-color: $white;
+
+	.chbe-admin-header__info {
+		position: absolute;
+		top: 0;
+		right: $grid-unit-20 + $grid-unit-05;
+
+		@media screen and (max-width: 782px) {
+			position: static;
+			margin-top: $grid-unit-20;
+		}
+	}
+}
